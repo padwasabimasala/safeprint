@@ -114,6 +114,6 @@ class EncodePrinter(BasePrinter):
 class Py3EncodePrinter(BasePrinter):
 	def imp_print(self, text, end):
 		"""Directly send utf8 bytes to stdout"""
-		sys.stdout.buffer.write((text + end).encode("utf-8"))
+		sys.stdout.write((text + end).encode("utf-8"))
 
 print = Printer().print
